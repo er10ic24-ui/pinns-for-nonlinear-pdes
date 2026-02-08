@@ -28,23 +28,30 @@ This notebook serves as a baseline PINN implementation.
 
 The self-adaptive strategy improves training stability compared to a standard PINN.
 
+### Reference Solution for the Viscous Burgers Equation
+The reference solution for the viscous Burgers equation is obtained from the file
+`burgers_shock.mat`, which is commonly used as a benchmark dataset. For completeness
+and reproducibility, a spectral method for computing the reference solution is also
+provided in the notebook.
+
 ## Repository Structure
 ```
 .
 ├── notebooks/
-│   ├── pinn_semilinear_elliptic.ipynb
-│   └── pinn_viscous_burgers_adaptive.ipynb
-├── figures/        
+│   ├── Semilinear_elliptic_example.ipynb
+│   └── Viscous_Burgers_SAPINN.ipynb
+├── burgers_shock.mat   
 ├── README.md
 ```
 ## Numerical Results
 	•	Both notebooks include:
 	•	solution visualizations
 	•	comparisons with reference solutions
-	•	relative error plots
+	•	relative error
 	•	Results are intended to demonstrate qualitative correctness rather than optimal numerical accuracy.
 
 All experiments are performed in single precision (float32) for computational efficiency.
+
 
 
 ## Notes
