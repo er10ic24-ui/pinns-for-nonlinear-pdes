@@ -17,3 +17,47 @@ The goal of this project is to demonstrate correct PINN formulation, training, a
 	•	boundary conditions
 
 This notebook serves as a baseline PINN implementation.
+
+### Viscous Burgers Equation
+	•	Time-dependent nonlinear PDE with viscosity
+	•	Solved using a self-adaptive PINN
+	•	Adaptive loss weighting is employed to balance:
+	•	PDE residual
+	•	initial condition
+	•	boundary conditions
+
+The self-adaptive strategy improves training stability compared to a standard PINN.
+
+## Repository Structure
+```
+.
+├── notebooks/
+│   ├── pinn_semilinear_elliptic.ipynb
+│   └── pinn_viscous_burgers_adaptive.ipynb
+├── figures/        
+├── README.md
+```
+## Numerical Results
+	•	Both notebooks include:
+	•	solution visualizations
+	•	comparisons with reference solutions
+	•	relative error plots
+	•	Results are intended to demonstrate qualitative correctness rather than optimal numerical accuracy.
+
+All experiments are performed in single precision (float32) for computational efficiency.
+
+
+## Notes
+	•	PINNs generate their own training data via collocation points; no external datasets are required.
+	•	This repository focuses on methodology and implementation rather than theoretical convergence guarantees.
+	•	Higher precision (float64) may further reduce error but is not required for demonstrating the PINN framework.
+
+## References 
+	•	M. Raissi, P. Perdikaris, G. E. Karniadakis, Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems
+		Involving Nonlinear Partial Di erential Equations, Journal of Computational Physics, 2019.
+	•	LD McClenny, UM Braga-Neto, Self-adaptive physics-informed neural networks,  Journal of Computational Physics, 2023.
+	•	J. Sirignano, K. Spiliopoulos, DGM: A deep learning algorithm for solving partial differential equations, Journal of Computational Physics, 2018.
+
+## Scope
+
+This repository is intended as a methodological demonstration of PINNs for nonlinear PDEs and as part of a broader portfolio in scientific machine learning and numerical analysis.
